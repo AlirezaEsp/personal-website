@@ -3,5 +3,17 @@
 {% block title %}My Name{% endblock %}
 
 {% block body %}
-    <p>Hello World!</p>
+    <div class="main-content style-3 section-onepage">
+        {% include "components/header.twig" %}
+        {% include "components/sidebar.twig" %}
+        {% include "components/about.twig" %}
+        {% include "components/resume.twig" %}
+        {% include "components/services.twig" %}
+        {% include "components/portfolio.twig" %}
+        {% include "components/testimonials.twig" %}
+        {% include "components/pricing.twig" %}
+        {% include "components/partners.twig" %}
+        {% include "components/contact.twig" %}
+    </div>
+        {% include "components/footer.twig" %}
 {% endblock %}
