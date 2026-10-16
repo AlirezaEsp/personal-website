@@ -19,6 +19,6 @@ $loader = new FilesystemLoader(
 $twig = new Environment($loader);
 
 // render main page
-echo $twig->render('page.twig');
+echo $twig->render('pages/index.twig');
 
 ?>
