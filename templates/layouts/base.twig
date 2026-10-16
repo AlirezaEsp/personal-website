@@ -2,55 +2,77 @@
 
 <html lang="en-US">
     <head>
-    <!-- Basic Page Needs -->
-    <meta charset="utf-8">
-    
-    <title>{% block title %}{% endblock %}</title>
+        <!-- Basic Page Needs -->
+        <meta charset="utf-8">
+        
+        <title>{% block title %}{% endblock %}</title>
 
-    <meta name="author" content="themesflat.com">
+        <meta name="author" content="themesflat.com">
 
-    <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- Theme Style -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/odometer.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/animateText.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+        <!-- Theme Style -->
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/odometer.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/animateText.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 
-    <!-- Font -->
-    <link rel="stylesheet" href="assets/font/fonts.css">
+        <!-- Font -->
+        <link rel="stylesheet" href="assets/font/fonts.css">
 
-    <!-- Icon -->
-    <link rel="stylesheet" type="text/css" href="assets/icons/icomoon/style.css">
+        <!-- Icon -->
+        <link rel="stylesheet" type="text/css" href="assets/icons/icomoon/style.css">
 
-    <!-- Favicon and Touch Icons  -->
-    <link rel="shortcut icon" href="assets/images/logo/favicon.svg">
-    <link rel="apple-touch-icon-precomposed" href="assets/images/logo/favicon.svg">
-</head>
+        <!-- Favicon and Touch Icons  -->
+        <link rel="shortcut icon" href="assets/images/logo/favicon.svg">
+        <link rel="apple-touch-icon-precomposed" href="assets/images/logo/favicon.svg">
+    </head>
 
-<body>
-    {% block body %}{% endblock %}
+    <body>
+        <!-- wrapper -->
+        <div id="wrapper" class="bg_dark counter-scroll">
+            <div class="body-overlay d-block">
+                <div class="bg-shape"></div>
+            </div>
+            <div class="tf-container w-2">
+                <div class="row">
+                    <div class="offset-xxl-4 col-xxl-7 offset-xl-4 col-xl-7">
+                        {% block body %}{% endblock %}
+                    </div>
+                </div>
+                <div class="right-bar style-1 d-flex flex-column align-items-center">
+                    <ul class="list-icon menu-option d-flex flex-column gap_8">
+                        <li>
+                            <div class="toggle-switch-mode">
+                                <i class="icon-Sun"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /wrapper -->
 
-    <!-- Javascript -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/odometer.min.js"></script>
-    <script src="assets/js/counter.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/carousel.js"></script>
-    <script src="assets/js/ScrollTrigger.min.js"></script>
-    <script src="assets/js/SplitText.min.js"></script>
-    <script src="assets/js/gsap.min.js"></script>
-    <script src="assets/js/handleGsap.js"></script>
-    <script src="assets/js/textanimation.js"></script>
-    <script src="assets/js/ScrollSmooth.js"></script>
-    <script src="assets/js/splitting.min.js"></script>
-    <script src="assets/js/jquery.fancybox.js"></script>
-    <script src="assets/js/main.js"></script>
-    <!-- Javascript -->
-</body>
+        <!-- javascript -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/odometer.min.js"></script>
+        <script src="assets/js/counter.js"></script>
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="assets/js/carousel.js"></script>
+        <script src="assets/js/ScrollTrigger.min.js"></script>
+        <script src="assets/js/SplitText.min.js"></script>
+        <script src="assets/js/gsap.min.js"></script>
+        <script src="assets/js/handleGsap.js"></script>
+        <script src="assets/js/textanimation.js"></script>
+        <script src="assets/js/ScrollSmooth.js"></script>
+        <script src="assets/js/splitting.min.js"></script>
+        <script src="assets/js/jquery.fancybox.js"></script>
+        <script src="assets/js/main.js"></script>
+    <!-- /javascript -->
+    </body>
 
 </html>
