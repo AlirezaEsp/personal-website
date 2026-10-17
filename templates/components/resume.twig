@@ -3,135 +3,58 @@
         <div class="tag-heading text-uppercase text-label font-3 letter-spacing-1 mb_30">
             Resume
         </div>
-        <h3 class="text_white fw-5 split-text effect-blur-fade">Education & Experience</h3>
+        <h3 class="text_white fw-5 split-text effect-blur-fade">Experience & Education</h3>
     </div>
     <div class="effect-line-hover">
-        <div class="wrap-education-item area-effect  scrolling-effect effectTop">
-            <span class="point"></span>
-            <div class="education-item">
-                <div class="content">
-                    <h5 class="font-4 mb_4">
-                        <a href="#contact" class="link">AI Developer</a>
-                    </h5>
-                    <span class="text-body-1 font-3">Google Inc.</span>
-                </div>
-                <div class="date text-caption-1 text_white font-3">
-                    2020 - Present
-                </div>
-                <div class="item-shape spotlight">
-                    <img
-                        src="assets/images/item/small-comet.webp"
-                        loading="lazy"
-                        decoding="async"
-                        alt="item"
-                    >
-                </div>
-            </div>
-        </div>
-        <div class="wrap-education-item area-effect scrolling-effect effectTop">
-            <span class="point"></span>
-            <div class="education-item">
-                <div class="content">
-                    <h5 class="font-4 mb_4">
-                        <a href="#contact" class="link">
-                            Machine Learning
-                        Engineer
-                        </a>
-                    </h5>
-                    <span class="text-body-1 font-3">Microsoft Inc.</span>
-                </div>
-                <div class="date text-caption-1 text_white font-3">
-                    2018 - 2020
-                </div>
-                <div class="item-shape spotlight">
-                    <img
-                        src="assets/images/item/small-comet.webp"
-                        loading="lazy"
-                        decoding="async"
-                        alt="item"
-                    >
+        {% for experience in resume.experiences %}
+            <div class="wrap-education-item area-effect  scrolling-effect effectTop">
+                <span class="point"></span>
+                <div class="education-item">
+                    <div class="content">
+                        <h5 class="font-4 mb_4">
+                            <a href="#contact" class="link">{{ experience.title }}</a>
+                        </h5>
+                        <span class="text-body-1 font-3">{{ experience.company }}</span>
+                    </div>
+                    <div class="date text-caption-1 text_white font-3">
+                        {{ experience.duration }}
+                    </div>
+                    <div class="item-shape spotlight">
+                        <img
+                            src="assets/images/item/small-comet.webp"
+                            loading="lazy"
+                            decoding="async"
+                            alt="item"
+                        >
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="wrap-education-item area-effect scrolling-effect effectTop">
-            <span class="point"></span>
-            <div class="education-item">
-                <div class="content">
-                    <h5 class="font-4 mb_4">
-                        <a href="#contact" class="link">
-                            Data
-                        Scientist
-                        </a>
-                    </h5>
-                    <span class="text-body-1 font-3">IBM Inc.</span>
-                </div>
-                <div class="date text-caption-1 text_white font-3">
-                    2014 - 2018
-                </div>
-                <div class="item-shape spotlight">
-                    <img
-                        src="assets/images/item/small-comet.webp"
-                        loading="lazy"
-                        decoding="async"
-                        alt="item"
-                    >
-                </div>
-            </div>
-        </div>
-        <div class="wrap-education-item area-effect scrolling-effect effectTop">
-            <span class="point"></span>
-            <div class="education-item">
-                <div class="content">
-                    <h5 class="font-4 mb_4">
-                        <a href="#contact" class="link">
-                            M.Sc. in
-                        Computer
-                        Science
-                        </a>
-                    </h5>
-                    <span class="text-body-1 font-3">Stanford University</span>
-                </div>
-                <div class="date text-caption-1 text_white font-3">
-                    2013 - 2014
-                </div>
-                <div class="item-shape spotlight">
-                    <img
-                        src="assets/images/item/small-comet.webp"
-                        loading="lazy"
-                        decoding="async"
-                        alt="item"
-                    >
+        {% endfor %}
+    </div>
+    <div class="effect-line-hover">
+        {% for education in resume.educations %}
+            <div class="wrap-education-item area-effect  scrolling-effect effectTop">
+                <span class="point"></span>
+                <div class="education-item">
+                    <div class="content">
+                        <h5 class="font-4 mb_4">
+                            <a href="#contact" class="link">{{ education.title }}</a>
+                        </h5>
+                        <span class="text-body-1 font-3">{{ education.institution }}</span>
+                    </div>
+                    <div class="date text-caption-1 text_white font-3">
+                        {{ education.duration }}
+                    </div>
+                    <div class="item-shape spotlight">
+                        <img
+                            src="assets/images/item/small-comet.webp"
+                            loading="lazy"
+                            decoding="async"
+                            alt="item"
+                        >
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="wrap-education-item area-effect scrolling-effect effectTop">
-            <span class="point"></span>
-            <div class="education-item">
-                <div class="content">
-                    <h5 class="font-4 mb_4">
-                        <a href="#contact" class="link">
-                            B.Sc. in
-                        Information
-                        Technolog
-                        </a>
-                    </h5>
-                    <span class="text-body-1 font-3">
-                        Massachusetts Institute of
-                    Technology
-                    </span>
-                </div>
-                <div class="date text-caption-1 text_white font-3">
-                    2008 - 2013
-                </div>
-                <div class="item-shape spotlight">
-                    <img
-                        src="assets/images/item/small-comet.webp"
-                        loading="lazy"
-                        decoding="async"
-                        alt="item"
-                    >
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>

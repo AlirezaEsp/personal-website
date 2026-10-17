@@ -18,7 +18,16 @@ $loader = new FilesystemLoader(
 // twig instance to render templates
 $twig = new Environment($loader);
 
+// load data
+$profile = require dirname(__DIR__) . '/database/seed/profile.php';
+$about = require dirname(__DIR__) . '/database/seed/about.php';
+$resume = require dirname(__DIR__) . '/database/seed/resume.php';
+
 // render main page
-echo $twig->render('pages/index.twig');
+echo $twig->render('pages/index.twig', [
+    'profile' => $profile,
+    'about' => $about,
+    'resume' => $resume,
+]);
 
 ?>
