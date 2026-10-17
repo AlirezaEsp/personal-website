@@ -39,40 +39,6 @@ if ($(".sw-single").length > 0) {
     var swiper = new Swiper(".sw-single", swiperSlider);
 }
 
-const technologySwiperEl = document.querySelector(".technology-swiper");
-if (technologySwiperEl) {
-    new Swiper(technologySwiperEl, {
-        slidesPerView: 3,
-        grid: {
-            rows: 2,
-            fill: "column",
-        },
-        spaceBetween: 16,
-        loop: true,
-        speed: 5000,
-        autoplay: {
-            delay: 0,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-        },
-        navigation: {
-            nextEl: ".technology-next",
-            prevEl: ".technology-prev",
-        },
-        breakpoints: {
-            575: {
-                slidesPerView: 3,
-            },
-            768: {
-                slidesPerView: 4,
-            },
-            992: {
-                slidesPerView: 8,
-            },
-        },
-    });
-}
-
 const $partnerEl = $(".tf-sw-partner");
 if ($partnerEl.length > 0) {
     let swiperPartner;

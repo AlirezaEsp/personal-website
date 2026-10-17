@@ -4288,20 +4288,17 @@ ANIMATION AREA CSS
   }
 }
 
-.technology-swiper {
-  width: 100%;
-  height: 160px;
-  overflow: hidden;
-}
-.technology-swiper .swiper-slide {
-  height: auto;
+.technology-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 88px);
+  justify-content: center;
+  gap: 24px;
 }
 .technology-item {
   display: grid;
   place-items: center;
-  width: 72px;
-  height: 72px;
-  margin: 0 auto;
+  width: 88px;
+  height: 88px;
   border-radius: 50%;
   background: var(--Bg-linear-2);
   transition: transform 0.3s ease;
@@ -4315,18 +4312,16 @@ ANIMATION AREA CSS
 .technology-item:hover {
   transform: translateY(-3px);
 }
-.technology-controls {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 24px;
+@media (max-width: 991px) {
+  .technology-grid {
+    grid-template-columns: repeat(4, 88px);
+  }
 }
-.technology-controls .technology-prev,
-.technology-controls .technology-next {
-  width: 40px;
-  height: 40px;
-  border: 0;
-  cursor: pointer;
+@media (max-width: 575px) {
+  .technology-grid {
+    grid-template-columns: repeat(3, 88px);
+    gap: 16px;
+  }
 }
 
 .footer-logo {
