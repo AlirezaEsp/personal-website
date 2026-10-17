@@ -4288,6 +4288,42 @@ ANIMATION AREA CSS
   }
 }
 
+.technology-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 88px);
+  justify-content: center;
+  gap: 24px;
+}
+.technology-item {
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--Bg-linear-2);
+  transition: transform 0.3s ease;
+}
+.technology-item img {
+  display: block;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+.technology-item:hover {
+  transform: translateY(-3px);
+}
+@media (max-width: 991px) {
+  .technology-grid {
+    grid-template-columns: repeat(4, 88px);
+  }
+}
+@media (max-width: 575px) {
+  .technology-grid {
+    grid-template-columns: repeat(3, 88px);
+    gap: 16px;
+  }
+}
+
 .footer-logo {
   margin-top: 26px;
 }
