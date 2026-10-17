@@ -3,115 +3,40 @@
         <div class="tag-heading text-uppercase text-label font-3 letter-spacing-1 mb_30">
             testimonials
         </div>
-        <h3 class="text_white fw-5  split-text effect-blur-fade">Trusted By Clients</h3>
+        <h3 class="text_white fw-5  split-text effect-blur-fade">Trusted By Employers & Clients</h3>
     </div>
     <div class="swiper sw-single">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="testimonial-item area-effect">
-                    <div class="icon">
-                        <i class="icon-quote"></i>
-                    </div>
-                    <p class="text-body-2 text_white mb_21">
-                        ZenG delivered exceptional work.
-                    He’s
-                    professional, fast, and extremely easy to work with. I’d definitely
-                    hire
-                    him
-                    again for future projects!"
-                    </p>
-                    <div class="athor">
-                        <h5 class="name text_white mb_4 font-4">
-                            <a href="#" class="link">
-                                Lincoln
-                            Press
-                            </a>
-                        </h5>
-                        <span class="text-label text-uppercase text_primary-color font-3">
-                            CEO
-                        Themesfalt
-                        </span>
-                    </div>
-                    <div class="item-shape spotlight">
-                        <img
-                            src="assets/images/item/small-comet.webp"
-                            loading="lazy"
-                            decoding="async"
-                            alt="item"
-                        >
+            {% for testimonial in testimonials %}
+                <div class="swiper-slide">
+                    <div class="testimonial-item area-effect">
+                        <div class="icon">
+                            <i class="icon-quote"></i>
+                        </div>
+                        <p class="text-body-2 text_white mb_21">
+                            {{ testimonial.comment }}
+                        </p>
+                        <div class="athor">
+                            <h5 class="name text_white mb_4 font-4">
+                                <a href="#testimonial" class="link">
+                                    {{ testimonial.name }}
+                                </a>
+                            </h5>
+                            <span class="text-label text-uppercase text_primary-color font-3">
+                                {{ testimonial.title }}
+                            </span>
+                        </div>
+                        <div class="item-shape spotlight">
+                            <img
+                                src="assets/images/item/small-comet.webp"
+                                loading="lazy"
+                                decoding="async"
+                                alt="item"
+                            >
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="testimonial-item area-effect">
-                    <div class="icon">
-                        <i class="icon-quote"></i>
-                    </div>
-                    <p class="text-body-2 text_white mb_21">
-                        "ZenG managed our project with
-                    impressive
-                    efficiency and clarity. Deadlines were met, communication was
-                    smooth,
-                    and the
-                    outcome was exactly what we hoped for."
-                    </p>
-                    <div class="athor">
-                        <h5 class="name text_white mb_4 font-4">
-                            <a href="#" class="link">
-                                Cheyenne
-                            Mango
-                            </a>
-                        </h5>
-                        <span class="text-label text-uppercase text_primary-color font-3">
-                            CEO
-                        Themesfalt
-                        </span>
-                    </div>
-                    <div class="item-shape spotlight">
-                        <img
-                            src="assets/images/item/small-comet.webp"
-                            loading="lazy"
-                            decoding="async"
-                            alt="item"
-                        >
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="testimonial-item area-effect">
-                    <div class="icon">
-                        <i class="icon-quote"></i>
-                    </div>
-                    <p class="text-body-2 text_white mb_21">
-                        "ZenG managed our project with
-                    impressive
-                    efficiency and clarity. Deadlines were met, communication was
-                    smooth,
-                    and the
-                    outcome was exactly what we hoped for."
-                    </p>
-                    <div class="athor">
-                        <h5 class="name text_white mb_4 font-4">
-                            <a href="#" class="link">
-                                Cheyenne
-                            Mango
-                            </a>
-                        </h5>
-                        <span class="text-label text-uppercase text_primary-color font-3">
-                            CEO
-                        Themesfalt
-                        </span>
-                    </div>
-                    <div class="item-shape spotlight">
-                        <img
-                            src="assets/images/item/small-comet.webp"
-                            loading="lazy"
-                            decoding="async"
-                            alt="item"
-                        >
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
         <div class="wrap-sw-button d-flex gap_12 ">
             <div class="sw-button sw-single-prev ">
