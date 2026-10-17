@@ -26,6 +26,8 @@ $expertises = require dirname(__DIR__) . '/database/seed/expertises.php';
 $portfolio = require dirname(__DIR__) . '/database/seed/portfolio.php';
 $testimonials = require dirname(__DIR__) . '/database/seed/testimonials.php';
 
+$contact = require dirname(__DIR__) . '/database/seed/contact.php';
+
 // render main page
 echo $twig->render('pages/index.twig', [
     'profile' => $profile,
@@ -34,6 +36,7 @@ echo $twig->render('pages/index.twig', [
     'expertises' => $expertises,
     'portfolio' => $portfolio,
     'testimonials' => $testimonials,
+    'contact' => $contact,
 ]);
 
 ?>
