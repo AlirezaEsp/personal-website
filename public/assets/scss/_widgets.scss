@@ -736,26 +736,31 @@
 }
 
 .technology-grid {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 24px;
 
     @include res(lg) {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
+        .technology-item {
+            flex-basis: calc((100% - 96px) / 5);
+        }
     }
 
     @include res(sm) {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 16px;
+
+        .technology-item {
+            flex-basis: calc((100% - 48px) / 4);
+        }
     }
 }
 
 .technology-item {
     display: grid;
     place-items: center;
-    justify-self: center;
-    width: 100%;
+    flex: 0 0 calc((100% - 120px) / 6);
     max-width: 144px;
     aspect-ratio: 1;
     border-radius: 50%;
