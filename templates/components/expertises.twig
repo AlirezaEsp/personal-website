@@ -1,0 +1,44 @@
+<div id="services" class="section-service section spacing-1">
+    <div class="heading-section mb_43">
+        <div class="tag-heading text-uppercase text-label font-3 letter-spacing-1 mb_33">
+            Expertise
+        </div>
+        <h3 class="text_white fw-5  split-text effect-blur-fade">
+            What I Do
+        </h3>
+    </div>
+    {% for expertise in expertises %}
+        <div class="service-item area-effect scrolling-effect effectBottom">
+            <div class="content-inner d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center content">
+                    <span class="number text-label text_muted-color font-3">{{ expertise.number }}</span>
+                    <h5 class="text_white font-4">
+                        <a href="#contact" class="link">
+                            {{ expertise.title }}
+                        </a>
+                    </h5>
+                    <p>{{ expertise.description }}</p>
+                </div>
+                <a href="#contact" class="btn-arrow">
+                    <i class="icon-ArrowRight"></i>
+                </a>
+                <div class="item-shape spotlight">
+                    <img
+                        src="assets/images/item/small-comet.webp"
+                        loading="lazy"
+                        decoding="async"
+                        alt="item"
+                    >
+                </div>
+            </div>
+            <div class="img-hover">
+                <img
+                    src="assets/images/item/service-item-1.webp"
+                    width="140"
+                    height="140"
+                    alt="item"
+                >
+            </div>
+        </div>
+    {% endfor %}
+</div>

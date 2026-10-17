@@ -22,12 +22,14 @@ $twig = new Environment($loader);
 $profile = require dirname(__DIR__) . '/database/seed/profile.php';
 $about = require dirname(__DIR__) . '/database/seed/about.php';
 $resume = require dirname(__DIR__) . '/database/seed/resume.php';
+$expertises = require dirname(__DIR__) . '/database/seed/expertises.php';
 
 // render main page
 echo $twig->render('pages/index.twig', [
     'profile' => $profile,
     'about' => $about,
     'resume' => $resume,
+    'expertises' => $expertises
 ]);
 
 ?>
