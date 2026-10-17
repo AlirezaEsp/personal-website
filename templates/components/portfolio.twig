@@ -6,101 +6,30 @@
         <h3 class="text_white fw-5  split-text effect-blur-fade">Featured Projects</h3>
     </div>
     <div class="tabs-content-wrap">
-        <div class="portfolio-item element">
-            <a href="assets/images/user/portfolio-item-1.webp " data-fancybox="gallery" class="img-style">
-                <img
-                    decoding="async"
-                    loading="lazy"
-                    src="assets/images/user/portfolio-item-1.webp"
-                    width="690"
-                    height="388"
-                    alt="portfolio"
-                >
-                <div class="tag font-3 text-label text-uppercase fw-6 letter-spacing-1">
-                    Conversational AI
-                </div>
-            </a>
-            <h5 class=" title font-4 text_white">
-                <a href="#" class="link">
-                    AI-Powered
-                Chatbot
+        {% for portfolio_item in portfolio %}
+            <div class="portfolio-item element">
+                <a href="assets/images/user/portfolio-item-1.webp " data-fancybox="gallery" class="img-style">
+                    <img
+                        decoding="async"
+                        loading="lazy"
+                        src="assets/images/user/portfolio-item-1.webp"
+                        width="690"
+                        height="388"
+                        alt="portfolio"
+                    >
+                    <div class="tag font-3 text-label text-uppercase fw-6 letter-spacing-1">
+                        {{ portfolio_item.tag }}
+                    </div>
                 </a>
-            </h5>
-            <div class="item-shape">
-                <img src="assets/images/item/small-comet.png" alt="item">
-            </div>
-        </div>
-        <div class="portfolio-item element">
-            <a href="assets/images/user/portfolio-item-2.webp" data-fancybox="gallery" class="img-style">
-                <img
-                    decoding="async"
-                    loading="lazy"
-                    src="assets/images/user/portfolio-item-2.webp"
-                    width="690"
-                    height="388"
-                    alt="portfolio"
-                >
-                <div class="tag font-3 text-label text-uppercase fw-6 letter-spacing-1">
-                    Computer Vision
+                <h5 class=" title font-4 text_white">
+                    <a href="{{ portfolio_item.url }}" class="link">
+                        {{ portfolio_item.title }}
+                    </a>
+                </h5>
+                <div class="item-shape">
+                    <img src="assets/images/item/small-comet.png" alt="item">
                 </div>
-            </a>
-            <h5 class=" title font-4 text_white">
-                <a href="#" class="link">
-                    Real-Time Object
-                Detection
-                </a>
-            </h5>
-            <div class="item-shape">
-                <img src="assets/images/item/small-comet.png" alt="item">
             </div>
-        </div>
-        <div class="portfolio-item element">
-            <a href="assets/images/user/portfolio-item-3.webp" data-fancybox="gallery" class="img-style">
-                <img
-                    decoding="async"
-                    loading="lazy"
-                    src="assets/images/user/portfolio-item-3.webp"
-                    width="690"
-                    height="388"
-                    alt="portfolio"
-                >
-                <div class="tag font-3 text-label text-uppercase fw-6 letter-spacing-1">
-                    Predictive Analytics
-                </div>
-            </a>
-            <h5 class=" title font-4 text_white">
-                <a href="#" class="link">
-                    Sales Forecast
-                Dashboard
-                </a>
-            </h5>
-            <div class="item-shape">
-                <img src="assets/images/item/small-comet.png" alt="item">
-            </div>
-        </div>
-        <div class="portfolio-item element">
-            <a href="assets/images/user/portfolio-item-4.webp" class="img-style">
-                <img
-                    decoding="async"
-                    loading="lazy"
-                    src="assets/images/user/portfolio-item-4.webp"
-                    width="690"
-                    height="388"
-                    alt="portfolio"
-                >
-                <div class="tag font-3 text-label text-uppercase fw-6 letter-spacing-1">
-                    Resume Pro
-                </div>
-            </a>
-            <h5 class=" title font-4 text_white">
-                <a href="#" class="link">
-                    Resume ZenG
-                pro
-                </a>
-            </h5>
-            <div class="item-shape">
-                <img src="assets/images/item/small-comet.png" alt="item">
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
