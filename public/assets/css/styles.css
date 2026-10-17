@@ -4290,23 +4290,25 @@ ANIMATION AREA CSS
 
 .technology-grid {
   display: grid;
-  grid-template-columns: repeat(6, 88px);
-  justify-content: center;
+  width: 100%;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 24px;
 }
 .technology-item {
   display: grid;
   place-items: center;
-  width: 88px;
-  height: 88px;
+  justify-self: center;
+  width: 100%;
+  max-width: 144px;
+  aspect-ratio: 1;
   border-radius: 50%;
   background: var(--Bg-linear-2);
   transition: transform 0.3s ease;
 }
 .technology-item img {
   display: block;
-  width: 44px;
-  height: 44px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
 }
 .technology-item:hover {
@@ -4314,13 +4316,22 @@ ANIMATION AREA CSS
 }
 @media (max-width: 991px) {
   .technology-grid {
-    grid-template-columns: repeat(4, 88px);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 @media (max-width: 575px) {
   .technology-grid {
-    grid-template-columns: repeat(3, 88px);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 16px;
+  }
+}
+@media (max-width: 575px) {
+  .technology-item {
+    max-width: 88px;
+  }
+  .technology-item img {
+    width: 44px;
+    height: 44px;
   }
 }
 
