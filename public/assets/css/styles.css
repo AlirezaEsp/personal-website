@@ -3942,6 +3942,7 @@ ANIMATION AREA CSS
   position: absolute;
   left: 62%;
   top: 26%;
+  width: 100px;
   opacity: 0;
   transform: rotate(4deg) scale(0.8) translateY(calc(-50% + 14px));
   transition: opacity 0.35s, transform 0.5s ease-out;
@@ -3949,6 +3950,8 @@ ANIMATION AREA CSS
   overflow: hidden;
 }
 .service-item .img-hover img {
+  width: 100%;
+  height: auto;
   transform: rotate(0) scale(1.14);
   transition: transform 0.3s ease-out;
 }
@@ -3962,7 +3965,7 @@ ANIMATION AREA CSS
 .service-item:hover .img-hover {
   z-index: 0;
   transform: rotate(0) scale(1) translateY(-50%);
-  opacity: 0.8;
+  opacity: 0.15;
 }
 .service-item:hover .img-hover img {
   transform: rotate(0) scale(1.01);
