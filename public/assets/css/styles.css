@@ -4294,6 +4294,7 @@ ANIMATION AREA CSS
   justify-content: center;
   width: 100%;
   gap: 24px;
+  row-gap: 40px;
 }
 .technology-item {
   display: grid;
@@ -4353,7 +4354,7 @@ ANIMATION AREA CSS
 @media (max-width: 575px) {
   .technology-grid {
     gap: 16px;
-    row-gap: 28px;
+    row-gap: 40px;
   }
   .technology-grid .technology-item {
     flex-basis: calc((100% - 48px) / 4);
