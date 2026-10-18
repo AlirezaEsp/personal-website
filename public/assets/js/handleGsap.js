@@ -150,7 +150,15 @@ gsap.registerPlugin(ScrollTrigger);
                     settings.scale = 0.4;
                 }
 
-                gsap.from(el, settings);
+                const tween = gsap.from(el, settings);
+                if ($el.hasClass("technology-item")) {
+                    const ability =
+                        parseFloat(el.style.getPropertyValue("--ability")) || 0;
+                    tween.eventCallback("onUpdate", () => {
+                        const currentAbility = ability * tween.progress();
+                        el.style.setProperty("--ability", `${currentAbility}%`);
+                    });
+                }
             });
         }
     };

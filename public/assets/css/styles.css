@@ -4298,18 +4298,49 @@ ANIMATION AREA CSS
 .technology-item {
   display: grid;
   place-items: center;
+  position: relative;
   flex: 0 0 calc((100% - 120px) / 6);
   max-width: 144px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: var(--Bg-linear-2);
+  background: conic-gradient(from 0deg, var(--Primary) 0 var(--ability), rgba(255, 255, 255, 0.24) var(--ability) 100%);
   transition: transform 0.3s ease;
 }
+.technology-item::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border-radius: inherit;
+  background: var(--Bg-dark);
+}
 .technology-item img {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 64px;
   height: 64px;
   object-fit: contain;
+}
+.technology-item .technology-progress-marker {
+  position: absolute;
+  z-index: 2;
+  inset: 3px;
+  pointer-events: none;
+}
+.technology-item .technology-progress-marker span {
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  padding: 2px 3px;
+  border: 1px solid var(--Primary);
+  border-radius: 20px;
+  background: var(--Bg-dark);
+  color: var(--White);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  transform: translate(-50%, -100%);
 }
 .technology-item:hover {
   transform: translateY(-3px);
@@ -4322,9 +4353,18 @@ ANIMATION AREA CSS
 @media (max-width: 575px) {
   .technology-grid {
     gap: 16px;
+    row-gap: 28px;
   }
   .technology-grid .technology-item {
     flex-basis: calc((100% - 48px) / 4);
+  }
+}
+  .section-technologies .heading-section {
+    margin-bottom: 66px;
+  }
+@media (max-width: 575px) {
+  .section-technologies .heading-section {
+    margin-bottom: 44px;
   }
 }
 @media (max-width: 575px) {
