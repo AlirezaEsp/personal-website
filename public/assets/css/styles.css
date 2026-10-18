@@ -3545,7 +3545,10 @@ ANIMATION AREA CSS
   padding: 28px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
-  overflow: hidden;
+  box-sizing: border-box;
+  max-height: calc(100vh - 32px);
+  overflow-x: hidden;
+  overflow-y: auto;
   background: var(--Bg-linear-2);
   z-index: 99;
 }
@@ -3557,13 +3560,21 @@ ANIMATION AREA CSS
 .user-bar .name {
   margin-bottom: 1px;
 }
+.user-bar .info .text-label {
+  font-size: 16px;
+  line-height: 20px;
+}
 .user-bar .img-style {
+  width: 80%;
   max-width: 314px;
   margin-left: auto;
   margin-right: auto;
 }
 .user-bar .img-style img {
   width: 100%;
+}
+.user-bar > .tf-btn {
+  height: 48px;
 }
 .user-bar .item-shape {
   position: absolute;
@@ -3573,7 +3584,6 @@ ANIMATION AREA CSS
 @media (max-width: 1440px) {
   .user-bar {
     left: 15px;
-    max-height: 100vh;
     transform: translateY(-50%);
     top: 50%;
   }
@@ -3586,12 +3596,16 @@ ANIMATION AREA CSS
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
+    max-height: unset;
     transform: unset;
   }
 }
 @media (max-width: 767px) {
   .user-bar {
     padding: 28px 15px;
+  }
+  .user-bar > .tf-btn {
+    height: 36px;
   }
 }
 .user-bar.style-1 {
@@ -3613,8 +3627,9 @@ ANIMATION AREA CSS
   overflow: hidden;
 }
 .box-author .name {
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 30px;
+  line-height: 30px;
+  white-space: nowrap;
 }
 
 .tag-heading {
