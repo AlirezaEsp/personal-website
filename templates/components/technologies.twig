@@ -8,15 +8,15 @@
         </h3>
     </div>
     <div class="technology-grid">
-        <div class="technology-item scrolling-effect effectBottom" style="--ability: 72%;"><img src="assets/images/logo/partner-1.png" alt="Technology logo"><span class="technology-progress-marker"><span>72%</span></span></div>
-        <div class="technology-item scrolling-effect effectBottom" style="--ability: 93%;"><img src="assets/images/logo/partner-1.png" alt="Technology logo"><span class="technology-progress-marker"><span>93%</span></span></div>
-        <div class="technology-item scrolling-effect effectBottom" style="--ability: 81%;"><img src="assets/images/logo/partner-1.png" alt="Technology logo"><span class="technology-progress-marker"><span>81%</span></span></div>
-        <div class="technology-item scrolling-effect effectBottom" style="--ability: 65%;"><img src="assets/images/logo/partner-1.png" alt="Technology logo"><span class="technology-progress-marker"><span>65%</span></span></div>
-        <div class="technology-item scrolling-effect effectBottom" style="--ability: 88%;"><img src="assets/images/logo/partner-1.png" alt="Technology logo"><span class="technology-progress-marker"><span>88%</span></span></div>
-        <div class="technology-item scrolling-effect effectBottom" style="--ability: 76%;"><img src="assets/images/logo/partner-1.png" alt="Technology logo"><span class="technology-progress-marker"><span>76%</span></span></div>
-        <div class="technology-item scrolling-effect effectBottom" style="--ability: 99%;"><img src="assets/images/logo/partner-1.png" alt="Technology logo"><span class="technology-progress-marker"><span>99%</span></span></div>
-        <div class="technology-item scrolling-effect effectBottom" style="--ability: 58%;"><img src="assets/images/logo/partner-1.png" alt="Technology logo"><span class="technology-progress-marker"><span>58%</span></span></div>
-        <div class="technology-item scrolling-effect effectBottom" style="--ability: 84%;"><img src="assets/images/logo/partner-1.png" alt="Technology logo"><span class="technology-progress-marker"><span>84%</span></span></div>
-        <div class="technology-item scrolling-effect effectBottom" style="--ability: 91%;"><img src="assets/images/logo/partner-1.png" alt="Technology logo"><span class="technology-progress-marker"><span>91%</span></span></div>
+        {% for technology in technologies %}
+            <div class="technology-item scrolling-effect effectBottom" style="--ability: {{ technology.percentage }}%;">
+                <img src="assets/images/logo/{{ technology.title }}.png" alt="Technology logo">
+                <span class="technology-progress-marker">
+                    <span>
+                        {{ technology.percentage }}%
+                    </span>
+                </span>
+            </div>
+        {% endfor %}
     </div>
 </div>
