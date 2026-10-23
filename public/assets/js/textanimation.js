@@ -1,4 +1,6 @@
 jQuery(document).ready(function($){
+	if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
 	//set animation timing
 	var animationDelay = 2500,
 		//loading bar effect

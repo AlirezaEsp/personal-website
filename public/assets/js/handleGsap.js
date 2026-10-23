@@ -14,11 +14,11 @@ gsap.registerPlugin(ScrollTrigger);
                     $el.find("p, a").length > 0 ? $el.find("p, a")[0] : el;
                 const hasClass = $el.hasClass.bind($el);
                 const pxl_split = new SplitText($target, {
-                    type: "words, chars",
+                    type: "words",
                     lineThreshold: 0.5,
                     linesClass: "split-line",
                 });
-                let split_type_set = pxl_split.chars;
+                let split_type_set = pxl_split.words;
                 gsap.set($target, { perspective: 400 });
 
                 const settings = {
@@ -86,10 +86,9 @@ gsap.registerPlugin(ScrollTrigger);
                     split_type_set = pxl_split.words;
                     gsap.fromTo(
                         split_type_set,
-                        { opacity: 0, filter: "blur(10px)", y: 20 },
+                        { opacity: 0, y: 20 },
                         {
                             opacity: 1,
-                            filter: "blur(0px)",
                             y: 0,
                             duration: 1,
                             stagger: 0.1,
@@ -186,14 +185,17 @@ gsap.registerPlugin(ScrollTrigger);
 
                         const pinTrigger = ScrollTrigger.create({
                             trigger: element,
-                            scrub: 1,
+                            scrub: 0.7,
+                            anticipatePin: 1,
                             start: `top+=-${headerHeight} top`,
                             end: `+=${totalHeight}`,
                             pin: true,
                             pinSpacing: false,
                             animation: gsap.to(element, {
-                                scale: 0.7,
-                                opacity: 0,
+                                scale: 0.9,
+                                opacity: 0.35,
+                                transformOrigin: "center top",
+                                ease: "none",
                             }),
                         });
 
@@ -279,6 +281,10 @@ gsap.registerPlugin(ScrollTrigger);
     };
 
     $(function () {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            return;
+        }
+
         animation_text();
         scrolling_effect();
         stackElement();

@@ -113,8 +113,13 @@ html {
     margin-right: 0 !important;
     font-size: 62.5%;
     scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 *,
@@ -129,12 +134,10 @@ body {
     background: var(--White);
     line-height: 1;
     padding: 0 !important;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     &::-webkit-scrollbar {
-        width: 3px;
-    }
-    &::-webkit-scrollbar-thumb {
-        background: var(--On-surface);
-        border-radius: 999px;
+        display: none;
     }
 }
 
